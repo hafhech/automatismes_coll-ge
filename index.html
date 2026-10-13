@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automatismes en maths</title>
+  <meta name="description" content="Séries de questions flash en mathématiques pour le rituel de début de cours, de la 6e à la 3e.">
+  <meta name="theme-color" content="#e4dcf4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 3h19l7 7v19H3z' fill='%23ffc83d'/%3E%3Cpath d='M22 3v7h7z' fill='%232b1a4a'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/accueil.css">
+  <link rel="stylesheet" href="css/diapo.css">
+
+  <script defer src="vendor/katex/katex.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body class="fond-papier">
+
+  <!-- ===== Choix de la série : un seul écran ===== -->
+  <div id="accueil" class="accueil">
+    <header class="marque">
+      <h1>Automatismes</h1>
+      <p>Le rituel de début de cours.</p>
+    </header>
+
+    <p id="erreur" class="erreur" role="alert" hidden></p>
+
+    <main class="plan">
+      <!-- Colonne 1 : le niveau -->
+      <nav class="colonne-niveaux" aria-labelledby="t-niveau">
+        <h2 id="t-niveau" class="invisible">Niveau</h2>
+        <div id="choix-niveau" class="niveaux" role="radiogroup" aria-labelledby="t-niveau"></div>
+      </nav>
+
+      <!-- Colonne 2 : le contenu, présenté comme une carte -->
+      <section class="carte pli" aria-labelledby="t-chapitre">
+        <h2 id="t-chapitre" class="invisible">Contenu de la série</h2>
+        <div id="choix-mode" class="onglets" role="radiogroup" aria-labelledby="t-chapitre"></div>
+        <p id="aide-mode" class="aide"></p>
+        <ul id="liste-chapitres" class="menu" role="radiogroup" aria-labelledby="t-chapitre"></ul>
+      </section>
+
+      <!-- Colonne 3 : la série et le bouton Lancer -->
+      <aside class="serie pli" aria-labelledby="t-serie">
+        <h2 id="t-serie" class="serie-titre"></h2>
+        <p id="resume-detail" class="serie-detail" aria-live="polite"></p>
+
+        <fieldset class="reglage">
+          <legend>Questions</legend>
+          <div id="choix-nombre" class="segments" role="radiogroup"></div>
+        </fieldset>
+
+        <fieldset class="reglage">
+          <legend>Temps par question</legend>
+          <div id="choix-duree" class="segments" role="radiogroup"></div>
+        </fieldset>
+
+        <fieldset class="reglage">
+          <legend>Difficulté</legend>
+          <div id="choix-difficulte" class="segments" role="radiogroup"></div>
+        </fieldset>
+
+        <button id="lancer" class="bouton bouton-accent lancer" type="button">Lancer la série</button>
+      </aside>
+    </main>
+  </div>
+
+  <!-- ===== Diaporama ===== -->
+  <section id="diapo" class="diapo fond-papier" aria-label="Série de questions" hidden>
+    <header class="diapo-barre">
+      <div class="diapo-infos">
+        <p id="diapo-position" class="diapo-position"></p>
+        <p id="diapo-contexte" class="diapo-contexte"></p>
+      </div>
+      <div class="diapo-outils">
+        <span id="diapo-reste" class="diapo-reste" aria-hidden="true"></span>
+        <button id="diapo-pause" class="bouton" type="button">Pause</button>
+        <button id="diapo-plein-ecran" class="bouton" type="button">Plein écran</button>
+        <button id="diapo-quitter" class="bouton" type="button">Quitter</button>
+      </div>
+    </header>
+
+    <div id="diapo-scene" class="diapo-scene" aria-live="polite">
+      <div class="feuille-question pli">
+        <div id="diapo-minuteur" class="minuteur"><span id="diapo-trait" class="minuteur-trait"></span></div>
+        <p id="diapo-question" class="question"></p>
+        <div id="diapo-reponse" class="reponse" data-ouverte="false" aria-hidden="true">
+          <div class="reponse-pli">
+            <p id="diapo-reponse-texte" class="reponse-texte"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="diapo-fin" class="fin" hidden>
+      <div class="feuille-fin pli">
+        <h2>Série terminée</h2>
+        <ol id="diapo-fin-liste" class="fin-liste"></ol>
+      </div>
+    </div>
+
+    <footer class="diapo-commandes">
+      <button id="diapo-precedent" class="bouton" type="button">Précédente</button>
+      <button id="diapo-correction" class="bouton bouton-accent" type="button">Correction</button>
+      <button id="diapo-suivant" class="bouton bouton-principal" type="button">Suivante</button>
+      <button id="diapo-rejouer" class="bouton bouton-accent" type="button" hidden>Nouvelle série</button>
+      <p class="diapo-raccourcis">Flèches : changer de question, C : correction, P : pause</p>
+    </footer>
+  </section>
+
+</body>
+</html>

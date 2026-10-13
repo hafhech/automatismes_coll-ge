@@ -1,0 +1,11 @@
+{
+  "name": "automatismes",
+  "version": "1.0.0",
+  "description": "Questions flash de mathématiques pour le rituel de début de cours (6e à 3e).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "verifier": "node scripts/verifier.mjs",
+    "serveur": "python3 -m http.server 8000"
+  }
+}

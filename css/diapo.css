@@ -1,0 +1,235 @@
+/* ==========================================================================
+   Diaporama plein écran : une feuille, une question. La correction se déplie
+   sous la question quand on la demande (ou quand le temps est écoulé).
+   ========================================================================== */
+
+.diapo {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Barre du haut --------------------------------------------------------- */
+
+.diapo-barre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem 0.5rem;
+}
+
+.diapo-infos p {
+  margin: 0;
+}
+
+.diapo-position {
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.diapo-contexte {
+  color: var(--encre-douce);
+}
+
+.diapo-outils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.diapo-outils .bouton {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+/* Secondes restantes : une pastille qui passe au jaune en fin de temps */
+.diapo-reste {
+  min-width: 4.5rem;
+  margin-right: 0.4rem;
+  padding: 0.1rem 0.7rem;
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  background: var(--feuille);
+  border: 2px solid var(--encre);
+}
+
+.diapo-reste.urgent {
+  background: var(--accent);
+}
+
+/* Scène : la feuille de la question ------------------------------------- */
+
+.diapo-scene {
+  display: flex;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.feuille-question {
+  --pli: 44px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 78rem;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+/* Minuteur : une bande en haut de la feuille qui se raccourcit */
+.minuteur {
+  height: 14px;
+  margin-right: var(--pli);
+  background: var(--fond);
+}
+
+.minuteur-trait {
+  display: block;
+  height: 100%;
+  background: var(--encre);
+  transform-origin: left center;
+  transform: scaleX(var(--reste, 1));
+}
+
+.minuteur-trait.urgent {
+  background: var(--accent);
+}
+
+.question {
+  margin: auto 0; /* centrée dans la place restante au-dessus de la correction */
+  padding: 1.5rem clamp(1.25rem, 4vw, 4rem);
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: clamp(2rem, 1rem + 4.4vw, 5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Correction : le bas de la feuille se déplie ----------------------------- */
+
+.reponse {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows 0.32s ease, visibility 0s 0.32s;
+}
+
+.reponse[data-ouverte="true"] {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition: grid-template-rows 0.32s ease, visibility 0s;
+}
+
+.reponse-pli {
+  min-height: 0;
+  overflow: hidden;
+  background: var(--accent);
+  border-top: 4px solid var(--encre);
+}
+
+.reponse-texte {
+  margin: 0;
+  padding: 1.25rem clamp(1.25rem, 4vw, 4rem) 1.5rem;
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: clamp(1.8rem, 1rem + 3.6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.question .katex,
+.reponse .katex,
+.fin-liste .katex {
+  font-size: 1.1em;
+}
+
+.maths-brut {
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+/* Écran de fin : toutes les corrections --------------------------------- */
+
+.fin {
+  overflow-y: auto;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.feuille-fin {
+  --pli: 44px;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1.75rem clamp(1.25rem, 4vw, 3rem) 2rem;
+}
+
+.feuille-fin h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.8rem, 1rem + 3vw, 3rem);
+}
+
+.fin-liste {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.fin-liste li {
+  margin-bottom: 1rem;
+}
+
+.fin-liste .fin-reponse {
+  display: block;
+  width: fit-content;
+  margin-top: 0.25rem;
+  padding: 0.1rem 0.6rem;
+  font-weight: 700;
+  background: var(--accent);
+}
+
+/* Commandes du bas ------------------------------------------------------ */
+
+.diapo-commandes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.5rem 1.5rem 1.1rem;
+}
+
+.diapo-commandes .bouton {
+  min-width: 9rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.diapo-raccourcis {
+  margin: 0 0 0 auto;
+  font-size: 0.9rem;
+  color: var(--encre-douce);
+}
+
+@media (max-width: 760px) {
+  .feuille-question {
+    --pli: 30px;
+  }
+
+  .diapo-raccourcis {
+    display: none;
+  }
+
+  .diapo-commandes .bouton {
+    flex: 1 1 8rem;
+    min-width: 0;
+  }
+}

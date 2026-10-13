@@ -1,0 +1,170 @@
+{
+  "niveau": "6e",
+  "chapitres": [
+    {
+      "id": "6e-01",
+      "titre": "Nombres entiers : lire, comparer, calculer",
+      "questions": [
+        { "q": "Écris en chiffres : trois mille sept.", "r": "$3 007$", "d": 1 },
+        { "q": "Quel est le chiffre des centaines dans $7 436$ ?", "r": "$4$", "d": 1 },
+        { "q": "Complète : $9 × … = 72$.", "r": "$8$", "d": 1 },
+        { "q": "Range dans l’ordre croissant : $305$ ; $53$ ; $350$ ; $35$.", "r": "$35 < 53 < 305 < 350$", "d": 1 },
+        { "q": "Calcule mentalement : $25 × 4 × 7$.", "r": "$700$", "d": 2 },
+        { "q": "Calcule mentalement : $246 + 198$.", "r": "$444$", "d": 2 },
+        { "q": "Calcule : $7 + 3 × 5$.", "r": "$22$", "d": 2 },
+        { "q": "Calcule astucieusement : $13 × 99$.", "r": "$13 × 100 − 13 = 1 287$", "d": 3 },
+        { "q": "Calcule : $(12 − 4) × 6 − 10$.", "r": "$38$", "d": 3 },
+        { "q": "Donne un ordre de grandeur de $398 + 1 005$.", "r": "Environ $400 + 1 000 = 1 400$", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-02",
+      "titre": "Multiples, diviseurs et division euclidienne",
+      "questions": [
+        { "q": "$72$ est-il un multiple de $4$ ?", "r": "Oui : $72 = 4 × 18$.", "d": 1 },
+        { "q": "Donne les quatre premiers multiples de $7$.", "r": "$7$ ; $14$ ; $21$ ; $28$", "d": 1 },
+        { "q": "Parmi $124$, $255$ et $370$, lesquels sont divisibles par $5$ ?", "r": "$255$ et $370$", "d": 1 },
+        { "q": "Quels sont tous les diviseurs de $12$ ?", "r": "$1$ ; $2$ ; $3$ ; $4$ ; $6$ ; $12$", "d": 2 },
+        { "q": "$135$ est-il divisible par $3$ ? par $9$ ?", "r": "Oui pour les deux, car $1 + 3 + 5 = 9$.", "d": 2 },
+        { "q": "Effectue la division euclidienne de $47$ par $5$.", "r": "$47 = 5 × 9 + 2$", "d": 2 },
+        { "q": "Un nombre est divisible par $2$ et par $5$. Par quel chiffre se termine-t-il ?", "r": "Par $0$.", "d": 2 },
+        { "q": "Dans une division euclidienne par $7$, quel est le plus grand reste possible ?", "r": "$6$", "d": 3 },
+        { "q": "$3 116$ est-il divisible par $4$ ?", "r": "Oui, car $16$ est divisible par $4$.", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-03",
+      "titre": "Fractions : partage et comparaison",
+      "questions": [
+        { "q": "On partage un disque en $8$ parts égales et on en colorie $3$. Quelle fraction est coloriée ?", "r": "$3/8$", "d": 1 },
+        { "q": "Compare $3/5$ et $4/5$.", "r": "$3/5 < 4/5$", "d": 1 },
+        { "q": "Compare $2/3$ et $1$.", "r": "$2/3 < 1$", "d": 1 },
+        { "q": "Range dans l’ordre croissant : $1/2$ ; $3/4$ ; $1/4$.", "r": "$1/4 < 1/2 < 3/4$", "d": 1 },
+        { "q": "Calcule : $2/7 + 3/7$.", "r": "$5/7$", "d": 1 },
+        { "q": "Complète : $3/4 = …/12$.", "r": "$9/12$", "d": 2 },
+        { "q": "Combien y a-t-il de quarts dans $2$ unités ?", "r": "$8$", "d": 2 },
+        { "q": "Écris $7/4$ comme la somme d’un entier et d’une fraction inférieure à $1$.", "r": "$7/4 = 1 + 3/4$", "d": 2 },
+        { "q": "Encadre $11/4$ par deux entiers consécutifs.", "r": "$2 < 11/4 < 3$", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-04",
+      "titre": "Nombres décimaux",
+      "questions": [
+        { "q": "Écris en chiffres : $5$ unités et $3$ dixièmes.", "r": "$5,3$", "d": 1 },
+        { "q": "Quel est le chiffre des centièmes dans $12,748$ ?", "r": "$4$", "d": 1 },
+        { "q": "Compare $3,07$ et $3,7$.", "r": "$3,07 < 3,7$", "d": 1 },
+        { "q": "Écris $7/10$ sous forme décimale.", "r": "$0,7$", "d": 1 },
+        { "q": "Écris $125/100$ sous forme décimale.", "r": "$1,25$", "d": 2 },
+        { "q": "Range dans l’ordre décroissant : $4,5$ ; $4,05$ ; $4,55$ ; $4,505$.", "r": "$4,55 > 4,505 > 4,5 > 4,05$", "d": 2 },
+        { "q": "Donne un nombre décimal compris entre $2,3$ et $2,4$.", "r": "Par exemple $2,35$.", "d": 2 },
+        { "q": "Arrondis $7,6$ à l’unité.", "r": "$8$", "d": 2 },
+        { "q": "Décompose $6,25$ en une somme d’unités, de dixièmes et de centièmes.", "r": "$6 + 2/10 + 5/100$", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-05",
+      "titre": "Opérations avec les nombres décimaux",
+      "questions": [
+        { "q": "Calcule : $2,5 + 3,7$.", "r": "$6,2$", "d": 1 },
+        { "q": "Calcule : $10 − 4,6$.", "r": "$5,4$", "d": 1 },
+        { "q": "Calcule : $3,2 × 10$.", "r": "$32$", "d": 1 },
+        { "q": "Calcule : $7,8 ÷ 10$.", "r": "$0,78$", "d": 1 },
+        { "q": "Calcule : $0,5 × 6$.", "r": "$3$", "d": 2 },
+        { "q": "Calcule : $12,5 × 4$.", "r": "$50$", "d": 2 },
+        { "q": "Calcule : $9 − 2,75$.", "r": "$6,25$", "d": 2 },
+        { "q": "Un stylo coûte $1,20$ €. Quel est le prix de $5$ stylos ?", "r": "$6$ €", "d": 2 },
+        { "q": "Calcule : $1,5 × 0,2$.", "r": "$0,3$", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-06",
+      "titre": "Droites, cercles et constructions",
+      "questions": [
+        { "q": "Deux droites perpendiculaires forment quel type d’angle ?", "r": "Un angle droit ($90°$).", "d": 1 },
+        { "q": "Comment appelle-t-on un segment qui relie deux points d’un cercle en passant par son centre ?", "r": "Un diamètre.", "d": 1 },
+        { "q": "Le rayon d’un cercle mesure $4$ cm. Quel est son diamètre ?", "r": "$8$ cm", "d": 1 },
+        { "q": "Quel instrument permet de tracer une droite perpendiculaire à une autre ?", "r": "L’équerre.", "d": 1 },
+        { "q": "Comment s’appelle la droite perpendiculaire à un segment en son milieu ?", "r": "La médiatrice du segment.", "d": 2 },
+        { "q": "Le point $A$ est sur le cercle de centre $O$ et de rayon $3$ cm. Que vaut $OA$ ?", "r": "$OA = 3$ cm", "d": 2 },
+        { "q": "Si $(d_1) ∥ (d_2)$ et $(d_2) ∥ (d_3)$, que peut-on dire de $(d_1)$ et $(d_3)$ ?", "r": "Elles sont parallèles : $(d_1) ∥ (d_3)$.", "d": 2 },
+        { "q": "Si $(d_1) ⊥ (d_2)$ et $(d_2) ∥ (d_3)$, que peut-on dire de $(d_1)$ et $(d_3)$ ?", "r": "Elles sont perpendiculaires : $(d_1) ⊥ (d_3)$.", "d": 3 },
+        { "q": "Combien de droites parallèles à $(d)$ passent par un point $A$ qui n’est pas sur $(d)$ ?", "r": "Une seule.", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-07",
+      "titre": "Angles",
+      "questions": [
+        { "q": "Comment s’appelle un angle de $90°$ ?", "r": "Un angle droit.", "d": 1 },
+        { "q": "Un angle de $35°$ est-il aigu ou obtus ?", "r": "Aigu.", "d": 1 },
+        { "q": "Un angle de $120°$ est-il aigu ou obtus ?", "r": "Obtus.", "d": 1 },
+        { "q": "Quelle est la mesure d’un angle plat ?", "r": "$180°$", "d": 1 },
+        { "q": "Quel instrument sert à mesurer un angle ?", "r": "Le rapporteur.", "d": 1 },
+        { "q": "Combien d’angles droits possède un rectangle ?", "r": "$4$", "d": 1 },
+        { "q": "La bissectrice d’un angle de $70°$ le partage en deux angles égaux. Quelle est leur mesure ?", "r": "$35°$", "d": 2 },
+        { "q": "On partage un angle plat en $4$ angles égaux. Quelle est la mesure de chacun ?", "r": "$45°$", "d": 2 },
+        { "q": "Un triangle a deux angles de $50°$ et $60°$. Quelle est la mesure du troisième ?", "r": "$70°$", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-08",
+      "titre": "Symétrie axiale",
+      "questions": [
+        { "q": "Quel est le symétrique d’un point situé sur l’axe de symétrie ?", "r": "Lui-même.", "d": 1 },
+        { "q": "Un segment de $5$ cm a un symétrique. Quelle est sa longueur ?", "r": "$5$ cm : la symétrie conserve les longueurs.", "d": 1 },
+        { "q": "Combien d’axes de symétrie possède un carré ?", "r": "$4$", "d": 2 },
+        { "q": "Combien d’axes de symétrie possède un rectangle qui n’est pas un carré ?", "r": "$2$", "d": 2 },
+        { "q": "Combien d’axes de symétrie possède un triangle équilatéral ?", "r": "$3$", "d": 2 },
+        { "q": "Combien d’axes de symétrie possède la lettre H ?", "r": "$2$ (un vertical et un horizontal).", "d": 2 },
+        { "q": "Le point $A'$ est le symétrique de $A$ par rapport à la droite $(d)$. Que représente $(d)$ pour le segment $[AA']$ ?", "r": "Sa médiatrice.", "d": 3 },
+        { "q": "Combien d’axes de symétrie possède un cercle ?", "r": "Une infinité : chacun de ses diamètres.", "d": 3 },
+        { "q": "La symétrie axiale conserve-t-elle les mesures des angles ?", "r": "Oui.", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-09",
+      "titre": "Proportionnalité",
+      "questions": [
+        { "q": "$3$ cahiers coûtent $6$ €. Quel est le prix de $6$ cahiers ?", "r": "$12$ €", "d": 1 },
+        { "q": "$1$ kg de pommes coûte $2,50$ €. Quel est le prix de $4$ kg ?", "r": "$10$ €", "d": 1 },
+        { "q": "$5$ stylos coûtent $4$ €. Quel est le prix de $10$ stylos ?", "r": "$8$ €", "d": 1 },
+        { "q": "Une recette pour $4$ personnes demande $200$ g de farine. Combien en faut-il pour $6$ personnes ?", "r": "$300$ g", "d": 2 },
+        { "q": "$3$ kg de cerises coûtent $9$ €. Quel est le prix de $5$ kg ?", "r": "$15$ €", "d": 2 },
+        { "q": "Dans un tableau de proportionnalité, $2$ devient $7$. En quoi devient $6$ ?", "r": "$21$", "d": 2 },
+        { "q": "Un robinet débite $12$ L en $3$ min. Combien de litres par minute ?", "r": "$4$ L", "d": 2 },
+        { "q": "Calcule $10 %$ de $250$.", "r": "$25$", "d": 2 },
+        { "q": "À l’échelle $1/100$, $5$ cm sur un plan représentent quelle longueur réelle ?", "r": "$500$ cm, soit $5$ m.", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-10",
+      "titre": "Périmètres et aires",
+      "questions": [
+        { "q": "Quel est le périmètre d’un carré de côté $6$ cm ?", "r": "$24$ cm", "d": 1 },
+        { "q": "Quelle est l’aire d’un rectangle de $5$ cm sur $3$ cm ?", "r": "$15$ cm²", "d": 1 },
+        { "q": "Quel est le périmètre d’un rectangle de longueur $8$ cm et de largeur $3$ cm ?", "r": "$22$ cm", "d": 1 },
+        { "q": "Quelle est l’aire d’un carré de côté $7$ cm ?", "r": "$49$ cm²", "d": 1 },
+        { "q": "Un carré a un périmètre de $20$ cm. Quelle est la longueur de son côté ?", "r": "$5$ cm", "d": 2 },
+        { "q": "Quelle est l’aire d’un triangle rectangle dont les côtés de l’angle droit mesurent $6$ cm et $4$ cm ?", "r": "$12$ cm²", "d": 2 },
+        { "q": "Convertis $5 000$ cm² en dm².", "r": "$50$ dm²", "d": 3 },
+        { "q": "Quelle est la longueur d’un cercle de diamètre $10$ cm ? (Prends $π ≈ 3,14$.)", "r": "$31,4$ cm", "d": 3 }
+      ]
+    },
+    {
+      "id": "6e-11",
+      "titre": "Durées et conversions",
+      "questions": [
+        { "q": "Convertis $2$ h $30$ min en minutes.", "r": "$150$ min", "d": 1 },
+        { "q": "Il est $14$ h $45$. Quelle heure sera-t-il dans $30$ min ?", "r": "$15$ h $15$", "d": 1 },
+        { "q": "Combien y a-t-il de secondes dans $3$ minutes ?", "r": "$180$ s", "d": 1 },
+        { "q": "Combien y a-t-il d’heures dans $2$ jours ?", "r": "$48$ h", "d": 1 },
+        { "q": "Convertis $1,5$ h en minutes.", "r": "$90$ min", "d": 2 },
+        { "q": "Convertis $135$ min en heures et minutes.", "r": "$2$ h $15$ min", "d": 2 },
+        { "q": "Quelle durée sépare $9$ h $40$ de $11$ h $10$ ?", "r": "$1$ h $30$ min", "d": 2 },
+        { "q": "Un film commence à $20$ h $15$ et dure $1$ h $50$. À quelle heure finit-il ?", "r": "$22$ h $05$", "d": 2 },
+        { "q": "Un train part à $7$ h $50$ et arrive à $10$ h $20$. Quelle est la durée du trajet ?", "r": "$2$ h $30$ min", "d": 3 }
+      ]
+    }
+  ]
+}

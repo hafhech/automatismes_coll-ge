@@ -1,0 +1,124 @@
+{
+  "niveau": "5e",
+  "chapitres": [
+    {
+      "id": "5e-01",
+      "titre": "Nombres relatifs",
+      "questions": [
+        { "q": "Donne l’opposé de $-9$.", "r": "$9$", "d": 1 },
+        { "q": "Compare $-3$ et $-7$.", "r": "$-3 > -7$", "d": 1 },
+        { "q": "Range dans l’ordre croissant : $-2$ ; $5$ ; $-8$ ; $0$.", "r": "$-8 < -2 < 0 < 5$", "d": 1 },
+        { "q": "Calcule : $-3 + (-4)$.", "r": "$-7$", "d": 1 },
+        { "q": "Calcule : $-5 + 8$.", "r": "$3$", "d": 1 },
+        { "q": "Calcule : $-4 − 6$.", "r": "$-10$", "d": 2 },
+        { "q": "Calcule : $7 − (-3)$.", "r": "$10$", "d": 2 },
+        { "q": "Calcule : $-2,5 + 1$.", "r": "$-1,5$", "d": 2 },
+        { "q": "Quelle est l’abscisse du milieu du segment d’extrémités $-3$ et $5$ ?", "r": "$1$", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-02",
+      "titre": "Fractions : addition, soustraction, produit",
+      "questions": [
+        { "q": "Simplifie $6/9$.", "r": "$2/3$", "d": 1 },
+        { "q": "Calcule : $5/6 + 1/6$.", "r": "$1$", "d": 1 },
+        { "q": "Calcule : $1/3 + 1/6$.", "r": "$1/2$", "d": 2 },
+        { "q": "Calcule : $3/4 − 1/2$.", "r": "$1/4$", "d": 2 },
+        { "q": "Calcule $3/4$ de $20$.", "r": "$15$", "d": 2 },
+        { "q": "Calcule : $2/3 × 3/5$.", "r": "$2/5$", "d": 2 },
+        { "q": "Compare $5/8$ et $3/4$.", "r": "$5/8 < 3/4$, car $3/4 = 6/8$.", "d": 2 },
+        { "q": "Calcule : $2 − 3/5$.", "r": "$7/5$", "d": 3 },
+        { "q": "Écris $0,75$ sous la forme d’une fraction irréductible.", "r": "$3/4$", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-03",
+      "titre": "Priorités de calcul et expressions littérales",
+      "questions": [
+        { "q": "Calcule : $5 + 4 × 3$.", "r": "$17$", "d": 1 },
+        { "q": "Calcule : $(5 + 4) × 3$.", "r": "$27$", "d": 1 },
+        { "q": "Calcule : $20 − 3 × 4$.", "r": "$8$", "d": 1 },
+        { "q": "Calcule $3x$ pour $x = 4$.", "r": "$12$", "d": 1 },
+        { "q": "Calcule $2x + 1$ pour $x = 5$.", "r": "$11$", "d": 1 },
+        { "q": "Calcule : $18 ÷ 3 + 2 × 5$.", "r": "$16$", "d": 2 },
+        { "q": "Réduis : $2a + 5a$.", "r": "$7a$", "d": 2 },
+        { "q": "Écris une expression : le triple de $n$, augmenté de $2$.", "r": "$3n + 2$", "d": 2 },
+        { "q": "Calcule : $4 × (2 + 3) − 6 ÷ 2$.", "r": "$17$", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-04",
+      "titre": "Proportionnalité et pourcentages",
+      "questions": [
+        { "q": "Calcule $10 %$ de $60$.", "r": "$6$", "d": 1 },
+        { "q": "Calcule $50 %$ de $36$.", "r": "$18$", "d": 1 },
+        { "q": "Calcule $25 %$ de $80$.", "r": "$20$", "d": 1 },
+        { "q": "Calcule $20 %$ de $15$.", "r": "$3$", "d": 2 },
+        { "q": "Calcule $75 %$ de $200$.", "r": "$150$", "d": 2 },
+        { "q": "Dans un tableau de proportionnalité, $4$ devient $10$. Quel est le coefficient ?", "r": "$2,5$", "d": 2 },
+        { "q": "Sur $60$ élèves, $15$ sont demi-pensionnaires. Quel pourcentage cela représente-t-il ?", "r": "$25 %$", "d": 2 },
+        { "q": "Un article à $40$ € baisse de $25 %$. Quel est son nouveau prix ?", "r": "$30$ €", "d": 2 },
+        { "q": "Calcule $5 %$ de $300$.", "r": "$15$", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-05",
+      "titre": "Triangles et angles",
+      "questions": [
+        { "q": "Quelle est la somme des mesures des angles d’un triangle ?", "r": "$180°$", "d": 1 },
+        { "q": "Quelle est la mesure de chaque angle d’un triangle équilatéral ?", "r": "$60°$", "d": 1 },
+        { "q": "Un triangle a deux angles de $50°$ et $60°$. Quelle est la mesure du troisième ?", "r": "$70°$", "d": 1 },
+        { "q": "Que dire des deux angles à la base d’un triangle isocèle ?", "r": "Ils ont la même mesure.", "d": 2 },
+        { "q": "Un triangle isocèle a un angle au sommet de $40°$. Quelle est la mesure de chaque angle à la base ?", "r": "$70°$", "d": 2 },
+        { "q": "Un triangle rectangle a un angle de $35°$. Quelle est la mesure de son autre angle aigu ?", "r": "$55°$", "d": 2 },
+        { "q": "Que dire de deux angles opposés par le sommet ?", "r": "Ils ont la même mesure.", "d": 2 },
+        { "q": "Peut-on construire un triangle dont les côtés mesurent $3$ cm, $4$ cm et $8$ cm ?", "r": "Non : $3 + 4 = 7$ et $7 < 8$.", "d": 3 },
+        { "q": "Deux droites parallèles sont coupées par une sécante. Que dire des angles alternes-internes ?", "r": "Ils ont la même mesure.", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-06",
+      "titre": "Parallélogrammes et symétrie centrale",
+      "questions": [
+        { "q": "Que dire des côtés opposés d’un parallélogramme ?", "r": "Ils sont parallèles et de même longueur.", "d": 1 },
+        { "q": "Quel est le périmètre d’un losange de côté $5$ cm ?", "r": "$20$ cm", "d": 1 },
+        { "q": "Le point $A'$ est le symétrique de $A$ par rapport au point $O$. Que représente $O$ pour $[AA']$ ?", "r": "Son milieu.", "d": 1 },
+        { "q": "En quel point se coupent les diagonales d’un parallélogramme ?", "r": "En leur milieu.", "d": 2 },
+        { "q": "Combien un parallélogramme a-t-il de centres de symétrie ?", "r": "Un seul : le point d’intersection de ses diagonales.", "d": 2 },
+        { "q": "Quelle propriété a un rectangle en plus de celles d’un parallélogramme ?", "r": "Il a un angle droit (donc quatre).", "d": 2 },
+        { "q": "Que dire des diagonales d’un losange ?", "r": "Elles sont perpendiculaires.", "d": 3 },
+        { "q": "Un carré est-il un losange ?", "r": "Oui : c’est un losange qui a un angle droit.", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-07",
+      "titre": "Aires et volumes",
+      "questions": [
+        { "q": "Quelle est l’aire d’un triangle de base $8$ cm et de hauteur $5$ cm ?", "r": "$20$ cm²", "d": 1 },
+        { "q": "Quelle est l’aire d’un parallélogramme de base $6$ cm et de hauteur $4$ cm ?", "r": "$24$ cm²", "d": 1 },
+        { "q": "Quel est le volume d’un cube de côté $2$ cm ?", "r": "$8$ cm³", "d": 1 },
+        { "q": "Quel est le volume d’un pavé droit de dimensions $3$ cm, $4$ cm et $5$ cm ?", "r": "$60$ cm³", "d": 2 },
+        { "q": "Quel est le volume d’un prisme droit de base $12$ cm² et de hauteur $5$ cm ?", "r": "$60$ cm³", "d": 2 },
+        { "q": "Un litre correspond à combien de dm³ ?", "r": "$1$ dm³", "d": 2 },
+        { "q": "Convertis $2$ m² en dm².", "r": "$200$ dm²", "d": 3 },
+        { "q": "Donne la valeur exacte de l’aire d’un disque de rayon $2$ cm.", "r": "$4π$ cm²", "d": 3 },
+        { "q": "Donne la valeur exacte du périmètre d’un cercle de rayon $5$ cm.", "r": "$10π$ cm", "d": 3 }
+      ]
+    },
+    {
+      "id": "5e-08",
+      "titre": "Statistiques et probabilités",
+      "questions": [
+        { "q": "Calcule la moyenne de $4$ ; $6$ et $8$.", "r": "$6$", "d": 1 },
+        { "q": "On lance un dé équilibré à $6$ faces. Quelle est la probabilité d’obtenir $6$ ?", "r": "$1/6$", "d": 1 },
+        { "q": "Un tableau contient les effectifs $5$, $7$ et $3$. Quel est l’effectif total ?", "r": "$15$", "d": 1 },
+        { "q": "On lance un dé équilibré. Quelle est la probabilité d’obtenir un nombre pair ?", "r": "$1/2$", "d": 2 },
+        { "q": "Quelle est la médiane de $3$ ; $5$ ; $9$ ?", "r": "$5$", "d": 2 },
+        { "q": "Quelle est l’étendue de la série $2$ ; $7$ ; $11$ ; $5$ ?", "r": "$11 − 2 = 9$", "d": 2 },
+        { "q": "Quelle est la probabilité d’un événement impossible ?", "r": "$0$", "d": 2 },
+        { "q": "Une probabilité peut-elle valoir $1,2$ ?", "r": "Non : elle est toujours comprise entre $0$ et $1$.", "d": 2 },
+        { "q": "Sur $50$ lancers, une pièce tombe $12$ fois sur pile. Quelle est la fréquence de pile ?", "r": "$12/50 = 0,24$, soit $24 %$.", "d": 3 }
+      ]
+    }
+  ]
+}

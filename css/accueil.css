@@ -1,0 +1,331 @@
+/* ==========================================================================
+   Écran de choix : niveaux | carte des chapitres | série à lancer
+   ========================================================================== */
+
+.accueil {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 2.5rem;
+}
+
+.marque h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: -0.015em;
+}
+
+.marque p {
+  margin: 0.25rem 0 0;
+  color: var(--encre-douce);
+}
+
+.erreur {
+  max-width: 44rem;
+  margin: 1rem 0 0;
+  padding: 0.8rem 1rem;
+  background: var(--accent-clair);
+  border-left: 6px solid var(--accent);
+}
+
+/* Disposition : trois colonnes ------------------------------------------- */
+
+.plan {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) 21rem;
+  gap: 1.25rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+/* Niveaux : de grands onglets de papier -------------------------------- */
+
+.niveaux {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.niveau {
+  --pli: 20px;
+  position: relative;
+  height: 4.75rem;
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--encre);
+  background: var(--fond-fonce);
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.12s;
+}
+
+.niveau:hover {
+  background: var(--feuille);
+}
+
+.niveau[aria-checked="true"] {
+  color: var(--feuille);
+  background: var(--encre);
+  clip-path: polygon(0 0, calc(100% - var(--pli)) 0, 100% var(--pli), 100% 100%, 0 100%);
+}
+
+.niveau[aria-checked="true"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--pli);
+  height: var(--pli);
+  background: linear-gradient(to bottom left, transparent 50%, var(--accent) 50%);
+}
+
+/* La carte : mode de série puis liste des chapitres ---------------------- */
+
+.carte {
+  padding: 1.25rem 1.75rem 1.5rem;
+}
+
+.onglets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-right: var(--pli);
+}
+
+.onglet {
+  font: inherit;
+  font-weight: 700;
+  color: var(--encre-douce);
+  background: none;
+  border: 0;
+  border-bottom: 4px solid transparent;
+  padding: 0.35rem 0;
+  cursor: pointer;
+}
+
+.onglet:hover {
+  color: var(--encre);
+}
+
+.onglet[aria-checked="true"] {
+  color: var(--encre);
+  border-bottom-color: var(--accent);
+}
+
+.aide {
+  min-height: 1.5rem;
+  margin: 0.6rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--encre-douce);
+}
+
+/* Chapitres présentés comme une carte de pâtisserie :
+   titre, points de conduite, nombre de questions. */
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapitre {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  color: var(--encre);
+  background: none;
+  border: 0;
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+}
+
+.chapitre:hover {
+  background: var(--fond);
+}
+
+.chapitre .numero {
+  flex: none;
+  width: 1.7rem;
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--encre-douce);
+}
+
+.chapitre .titre {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 78%;
+}
+
+.chapitre .points {
+  flex: 1 1 1rem;
+  min-width: 1rem;
+  border-bottom: 2px dotted color-mix(in srgb, var(--encre) 40%, transparent);
+  transform: translateY(-0.3rem);
+}
+
+.chapitre .nb-questions {
+  flex: none;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--encre-douce);
+}
+
+/* Chapitres rejoués dans « Depuis le début » */
+.chapitre.inclus {
+  background: var(--accent-clair);
+}
+
+.chapitre[aria-checked="true"] {
+  font-weight: 700;
+  background: var(--accent);
+}
+
+.chapitre[aria-checked="true"] .numero,
+.chapitre[aria-checked="true"] .nb-questions {
+  color: var(--encre);
+}
+
+.chapitre[aria-checked="true"] .points {
+  border-bottom-color: var(--encre);
+}
+
+/* Quand il n'y a pas de chapitre à choisir (tout le niveau, calcul mental) */
+.menu-vide {
+  margin: 0;
+  padding: 1.25rem 0.65rem 0.5rem;
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+/* La série ---------------------------------------------------------------- */
+
+.serie {
+  position: sticky;
+  top: 1rem;
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.serie-titre {
+  margin-right: var(--pli);
+  font-size: 1.8rem;
+}
+
+.serie-detail {
+  margin: 0.35rem 0 0;
+  min-height: 3rem;
+  color: var(--encre-douce);
+}
+
+.reglage {
+  margin: 1.1rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.reglage legend {
+  padding: 0;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.segments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.segment {
+  font: inherit;
+  color: var(--encre);
+  background: var(--feuille);
+  border: 2px solid var(--encre);
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.12s;
+}
+
+.segment:hover {
+  background: var(--fond);
+}
+
+.segment[aria-checked="true"] {
+  font-weight: 700;
+  color: var(--feuille);
+  background: var(--encre);
+}
+
+/* Le bouton Lancer : un coin plié, lui aussi. */
+.lancer {
+  --pli: 18px;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 1rem 1.25rem;
+  font-family: var(--police-titre);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-size: 1.5rem;
+  border: 0;
+  clip-path: polygon(0 0, calc(100% - var(--pli)) 0, 100% var(--pli), 100% 100%, 0 100%);
+}
+
+.lancer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--pli);
+  height: var(--pli);
+  background: linear-gradient(to bottom left, transparent 50%, var(--encre) 50%);
+}
+
+/* Écrans étroits ---------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .plan {
+    grid-template-columns: 6rem minmax(0, 1fr) 19rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .plan {
+    grid-template-columns: 1fr;
+  }
+
+  .niveaux {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .niveau {
+    height: 3.5rem;
+    font-size: 1.7rem;
+  }
+
+  .serie {
+    position: static;
+  }
+
+  .carte {
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  .chapitre .titre {
+    max-width: none;
+  }
+
+  .chapitre .points {
+    display: none;
+  }
+
+  .chapitre .nb-questions {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "niveau": "4e",
+  "chapitres": [
+    {
+      "id": "4e-01",
+      "titre": "Nombres relatifs : produits et quotients",
+      "questions": [
+        { "q": "Calcule : $(-3) × 4$.", "r": "$-12$", "d": 1 },
+        { "q": "Calcule : $(-5) × (-6)$.", "r": "$30$", "d": 1 },
+        { "q": "Calcule : $-18 ÷ 3$.", "r": "$-6$", "d": 1 },
+        { "q": "Calcule : $12 ÷ (-4)$.", "r": "$-3$", "d": 1 },
+        { "q": "Calcule : $-3 − (-8)$.", "r": "$5$", "d": 2 },
+        { "q": "Calcule : $-2 × 3 × (-4)$.", "r": "$24$", "d": 2 },
+        { "q": "Calcule : $(-1)^5$.", "r": "$-1$", "d": 2 },
+        { "q": "Sans calculer, quel est le signe de $(-2) × (-3) × (-5)$ ?", "r": "Négatif : le résultat est $-30$.", "d": 2 },
+        { "q": "Calcule : $(-2)^3$.", "r": "$-8$", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-02",
+      "titre": "Fractions : les quatre opérations",
+      "questions": [
+        { "q": "Simplifie $24/36$.", "r": "$2/3$", "d": 1 },
+        { "q": "Quel est l’inverse de $4/7$ ?", "r": "$7/4$", "d": 1 },
+        { "q": "Calcule : $2/3 + 3/4$.", "r": "$17/12$", "d": 2 },
+        { "q": "Calcule : $5/6 − 1/4$.", "r": "$7/12$", "d": 2 },
+        { "q": "Calcule : $7 × 2/3$.", "r": "$14/3$", "d": 2 },
+        { "q": "Calcule : $1/2 ÷ 4$.", "r": "$1/8$", "d": 2 },
+        { "q": "Calcule : $4/5 × 15/8$.", "r": "$3/2$", "d": 3 },
+        { "q": "Calcule : $3/4 ÷ 3/8$.", "r": "$2$", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-03",
+      "titre": "Puissances",
+      "questions": [
+        { "q": "Calcule : $2^5$.", "r": "$32$", "d": 1 },
+        { "q": "Calcule : $10^3$.", "r": "$1 000$", "d": 1 },
+        { "q": "Calcule : $(-3)^2$.", "r": "$9$", "d": 2 },
+        { "q": "Calcule : $5^0$.", "r": "$1$", "d": 2 },
+        { "q": "Écris $10^{-2}$ sous forme décimale.", "r": "$0,01$", "d": 2 },
+        { "q": "Écris sous la forme d’une seule puissance : $3^2 × 3^4$.", "r": "$3^6$, soit $729$.", "d": 2 },
+        { "q": "Simplifie : $7^5 ÷ 7^3$.", "r": "$7^2 = 49$", "d": 3 },
+        { "q": "Écris sous la forme d’une seule puissance : $(2^3)^2$.", "r": "$2^6 = 64$", "d": 3 },
+        { "q": "Écris $0,003$ comme un produit par une puissance de $10$.", "r": "$3 × 10^{-3}$", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-04",
+      "titre": "Calcul littéral et équations",
+      "questions": [
+        { "q": "Réduis : $5x − 2x + 3$.", "r": "$3x + 3$", "d": 1 },
+        { "q": "Développe : $3(x + 2)$.", "r": "$3x + 6$", "d": 1 },
+        { "q": "Résous : $x + 5 = 12$.", "r": "$x = 7$", "d": 1 },
+        { "q": "Résous : $3x = 21$.", "r": "$x = 7$", "d": 1 },
+        { "q": "Calcule $2x − 3$ pour $x = -1$.", "r": "$-5$", "d": 2 },
+        { "q": "Factorise : $4x + 8$.", "r": "$4(x + 2)$", "d": 2 },
+        { "q": "Résous : $2x + 1 = 9$.", "r": "$x = 4$", "d": 2 },
+        { "q": "Développe : $(x + 1)(x + 2)$.", "r": "$x^2 + 3x + 2$", "d": 3 },
+        { "q": "Résous : $5x − 4 = 2x + 5$.", "r": "$x = 3$", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-05",
+      "titre": "Théorème de Pythagore",
+      "questions": [
+        { "q": "Comment s’appelle le plus grand côté d’un triangle rectangle ?", "r": "L’hypoténuse.", "d": 1 },
+        { "q": "Les côtés de l’angle droit mesurent $3$ et $4$. Combien mesure l’hypoténuse ?", "r": "$5$", "d": 1 },
+        { "q": "Les côtés de l’angle droit mesurent $6$ et $8$. Combien mesure l’hypoténuse ?", "r": "$10$", "d": 1 },
+        { "q": "Calcule : $5^2 + 12^2$.", "r": "$169$", "d": 2 },
+        { "q": "L’hypoténuse mesure $13$ et un côté de l’angle droit $5$. Combien mesure l’autre côté ?", "r": "$12$", "d": 2 },
+        { "q": "Donne la valeur exacte de l’hypoténuse d’un triangle rectangle dont les côtés de l’angle droit mesurent $1$ et $1$.", "r": "$sqrt(2)$", "d": 2 },
+        { "q": "Le triangle de côtés $7$, $24$ et $25$ est-il rectangle ?", "r": "Oui : $7^2 + 24^2 = 625 = 25^2$.", "d": 3 },
+        { "q": "Le triangle de côtés $4$, $5$ et $6$ est-il rectangle ?", "r": "Non : $4^2 + 5^2 = 41$ et $6^2 = 36$.", "d": 3 },
+        { "q": "Donne la valeur exacte de la diagonale d’un carré de côté $5$ cm.", "r": "$5sqrt(2)$ cm", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-06",
+      "titre": "Cosinus et droites remarquables du triangle",
+      "questions": [
+        { "q": "Une médiane relie un sommet d’un triangle à quel point du côté opposé ?", "r": "Au milieu de ce côté.", "d": 1 },
+        { "q": "Dans un triangle rectangle, comment calcule-t-on le cosinus d’un angle aigu ?", "r": "Côté adjacent divisé par hypoténuse.", "d": 2 },
+        { "q": "Dans un triangle rectangle, le côté adjacent à un angle mesure $3$ et l’hypoténuse $5$. Combien vaut le cosinus de cet angle ?", "r": "$3/5 = 0,6$", "d": 2 },
+        { "q": "Les trois médiatrices d’un triangle se coupent en un point. De quel cercle est-il le centre ?", "r": "Du cercle circonscrit au triangle.", "d": 2 },
+        { "q": "Comment appelle-t-on le point d’intersection des trois médianes d’un triangle ?", "r": "Le centre de gravité.", "d": 3 },
+        { "q": "Comment appelle-t-on le point d’intersection des trois hauteurs d’un triangle ?", "r": "L’orthocentre.", "d": 3 },
+        { "q": "Dans un triangle, une droite passe par les milieux de deux côtés. Que dire du troisième côté ?", "r": "Il lui est parallèle, et mesure le double.", "d": 3 },
+        { "q": "Combien vaut le cosinus de $60°$ ?", "r": "$0,5$", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-07",
+      "titre": "Vitesses, grandeurs et pourcentages",
+      "questions": [
+        { "q": "Un véhicule parcourt $120$ km en $2$ h. Quelle est sa vitesse moyenne ?", "r": "$60$ km/h", "d": 1 },
+        { "q": "On roule à $90$ km/h pendant $2$ h. Quelle distance parcourt-on ?", "r": "$180$ km", "d": 1 },
+        { "q": "Un trajet de $90$ km dure $1,5$ h. Quelle est la vitesse moyenne ?", "r": "$60$ km/h", "d": 2 },
+        { "q": "On parcourt $30$ km à $60$ km/h. Combien de temps dure le trajet ?", "r": "$30$ min", "d": 2 },
+        { "q": "Un article à $80$ € augmente de $10 %$. Quel est son nouveau prix ?", "r": "$88$ €", "d": 2 },
+        { "q": "Un prix passe de $50$ € à $60$ €. Quel est le pourcentage d’augmentation ?", "r": "$20 %$", "d": 3 },
+        { "q": "Convertis $36$ km/h en m/s.", "r": "$10$ m/s", "d": 3 },
+        { "q": "Convertis $5$ m/s en km/h.", "r": "$18$ km/h", "d": 3 },
+        { "q": "Un prix baisse de $20 %$ puis augmente de $20 %$. Retrouve-t-on le prix de départ ?", "r": "Non : $0,8 × 1,2 = 0,96$.", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-08",
+      "titre": "Pyramides, cônes, cylindres et volumes",
+      "questions": [
+        { "q": "Combien de faces possède une pyramide à base carrée ?", "r": "$5$", "d": 2 },
+        { "q": "Quel est le volume d’un pavé droit de dimensions $2$ cm, $3$ cm et $10$ cm ?", "r": "$60$ cm³", "d": 1 },
+        { "q": "Quel est le volume d’un prisme droit de base $15$ cm² et de hauteur $4$ cm ?", "r": "$60$ cm³", "d": 1 },
+        { "q": "Combien de litres y a-t-il dans $1$ m³ ?", "r": "$1 000$ L", "d": 2 },
+        { "q": "Quel est le volume d’une pyramide de base $9$ cm² et de hauteur $6$ cm ?", "r": "$18$ cm³", "d": 2 },
+        { "q": "Convertis $2 500$ cm³ en litres.", "r": "$2,5$ L", "d": 3 },
+        { "q": "Quel est le volume d’un cône de base $12$ cm² et de hauteur $5$ cm ?", "r": "$20$ cm³", "d": 3 },
+        { "q": "Donne la valeur exacte du volume d’un cylindre de rayon $1$ cm et de hauteur $2$ cm.", "r": "$2π$ cm³", "d": 3 }
+      ]
+    },
+    {
+      "id": "4e-09",
+      "titre": "Statistiques et probabilités",
+      "questions": [
+        { "q": "Calcule la moyenne de $10$ ; $12$ ; $14$ et $16$.", "r": "$13$", "d": 1 },
+        { "q": "Une urne contient $3$ boules rouges et $7$ bleues. Quelle est la probabilité de tirer une rouge ?", "r": "$3/10$", "d": 1 },
+        { "q": "Quelle est la probabilité d’un événement certain ?", "r": "$1$", "d": 1 },
+        { "q": "Même urne : quelle est la probabilité de ne pas tirer de boule rouge ?", "r": "$7/10$", "d": 2 },
+        { "q": "Quelle est la médiane de $2$ ; $4$ ; $7$ ; $9$ ; $20$ ?", "r": "$7$", "d": 2 },
+        { "q": "Quelle est l’étendue de $4$ ; $9$ ; $15$ ; $2$ ?", "r": "$13$", "d": 2 },
+        { "q": "Sur $25$ élèves, $5$ vont au club de maths. Quel pourcentage cela représente-t-il ?", "r": "$20 %$", "d": 2 },
+        { "q": "Quelle est la médiane de $3$ ; $5$ ; $7$ ; $9$ ?", "r": "$6$", "d": 3 },
+        { "q": "On lance deux fois une pièce équilibrée. Quelle est la probabilité d’obtenir deux fois pile ?", "r": "$1/4$", "d": 3 }
+      ]
+    }
+  ]
+}

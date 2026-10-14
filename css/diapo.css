@@ -50,7 +50,7 @@
   font-size: 0.95rem;
 }
 
-/* Secondes restantes : une pastille qui passe au jaune en fin de temps */
+/* Secondes restantes : une pastille qui se colore en fin de temps */
 .diapo-reste {
   min-width: 4.5rem;
   margin-right: 0.4rem;
@@ -79,7 +79,6 @@
 }
 
 .feuille-question {
-  --pli: 44px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -91,7 +90,6 @@
 /* Minuteur : une bande en haut de la feuille qui se raccourcit */
 .minuteur {
   height: 14px;
-  margin-right: var(--pli);
   background: var(--fond);
 }
 
@@ -167,7 +165,6 @@
 }
 
 .feuille-fin {
-  --pli: 44px;
   max-width: 62rem;
   margin: 0 auto;
   padding: 1.75rem clamp(1.25rem, 4vw, 3rem) 2rem;
@@ -220,10 +217,6 @@
 }
 
 @media (max-width: 760px) {
-  .feuille-question {
-    --pli: 30px;
-  }
-
   .diapo-raccourcis {
     display: none;
   }

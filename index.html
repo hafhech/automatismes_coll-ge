@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Automatismes en maths</title>
   <meta name="description" content="Séries de questions flash en mathématiques pour le rituel de début de cours, de la 6e à la 3e.">
-  <meta name="theme-color" content="#e4dcf4">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 3h19l7 7v19H3z' fill='%23ffc83d'/%3E%3Cpath d='M22 3v7h7z' fill='%232b1a4a'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#dce8f7">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 3h19l7 7v19H3z' fill='%2382b4f2'/%3E%3Cpath d='M22 3v7h7z' fill='%2312295a'/%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="vendor/katex/katex.min.css">
   <link rel="stylesheet" href="css/base.css">
@@ -35,7 +35,7 @@
       </nav>
 
       <!-- Colonne 2 : le contenu, présenté comme une carte -->
-      <section class="carte pli" aria-labelledby="t-chapitre">
+      <section class="carte feuille" aria-labelledby="t-chapitre">
         <h2 id="t-chapitre" class="invisible">Contenu de la série</h2>
         <div id="choix-mode" class="onglets" role="radiogroup" aria-labelledby="t-chapitre"></div>
         <p id="aide-mode" class="aide"></p>
@@ -43,7 +43,7 @@
       </section>
 
       <!-- Colonne 3 : la série et le bouton Lancer -->
-      <aside class="serie pli" aria-labelledby="t-serie">
+      <aside class="serie feuille" aria-labelledby="t-serie">
         <h2 id="t-serie" class="serie-titre"></h2>
         <p id="resume-detail" class="serie-detail" aria-live="polite"></p>
 
@@ -83,7 +83,7 @@
     </header>
 
     <div id="diapo-scene" class="diapo-scene" aria-live="polite">
-      <div class="feuille-question pli">
+      <div class="feuille-question feuille">
         <div id="diapo-minuteur" class="minuteur"><span id="diapo-trait" class="minuteur-trait"></span></div>
         <p id="diapo-question" class="question"></p>
         <div id="diapo-reponse" class="reponse" data-ouverte="false" aria-hidden="true">
@@ -95,7 +95,7 @@
     </div>
 
     <div id="diapo-fin" class="fin" hidden>
-      <div class="feuille-fin pli">
+      <div class="feuille-fin feuille">
         <h2>Série terminée</h2>
         <ol id="diapo-fin-liste" class="fin-liste"></ol>
       </div>

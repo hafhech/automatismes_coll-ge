@@ -1,23 +1,8 @@
+import { alea, choix, dec, terme, entreParentheses } from "./outils.js";
+
 // Questions de calcul mental fabriquées au hasard, niveau par niveau.
 // Elles complètent les banques de questions : une série n'est donc jamais vide
 // et le mode « Calcul mental » ne se répète pas.
-
-const alea = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const choix = (liste) => liste[alea(0, liste.length - 1)];
-
-// Nombre décimal écrit avec une virgule, sans zéros inutiles.
-function dec(x, chiffres = 3) {
-  return String(Number(x.toFixed(chiffres))).replace(".", ",");
-}
-
-// Terme signé pour écrire « ax + b » ou « a + (-b) ».
-function terme(b) {
-  return b < 0 ? `- ${-b}` : `+ ${b}`;
-}
-
-function entreParentheses(n) {
-  return n < 0 ? `(${n})` : String(n);
-}
 
 const GENERATEURS = {
   "6e": [

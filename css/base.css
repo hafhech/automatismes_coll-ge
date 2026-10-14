@@ -1,9 +1,8 @@
 /* ==========================================================================
-   Base : polices, couleurs, motif du pli, éléments communs
+   Base : polices, couleurs, feuilles, boutons, éléments communs
 
-   Identité : du papier plié. Un fond lilas, des feuilles claires,
-   une encre aubergine et un seul accent jaune tournesol. Le coin plié des feuilles
-   est la signature du site ; la correction « se déplie » sous la question.
+   Identité : des feuilles de papier posées sur un fond uni, une encre bleu nuit
+   et des bleus ton sur ton. La correction « se déplie » sous la question.
    ========================================================================== */
 
 @font-face {
@@ -32,20 +31,20 @@
 
 :root {
   /* Palette : c'est ici qu'on change l'ambiance du site */
-  --fond: #e4dcf4;          /* fond de page : lilas clair */
-  --fond-fonce: #c9bbe6;    /* onglets inactifs, rabat des coins pliés */
-  --feuille: #fcfaff;       /* feuilles de papier */
-  --encre: #2b1a4a;         /* textes et traits : aubergine */
-  --encre-douce: #5e4f80;   /* textes secondaires */
-  --accent: #ffc83d;        /* sélection, correction, bouton Lancer : jaune tournesol */
-  --accent-clair: #ffebb3;  /* chapitres rejoués en mode « Depuis le début » */
+  --fond: #dce8f7;          /* fond de page : bleu très clair */
+  --fond-fonce: #bcd3ee;    /* onglets inactifs, traits discrets */
+  --feuille: #fbfdff;       /* feuilles de papier */
+  --encre: #12295a;         /* textes et traits : bleu nuit */
+  --encre-douce: #4a6188;   /* textes secondaires */
+  --accent: #82b4f2;        /* sélection, correction, bouton Lancer : bleu franc */
+  --accent-clair: #cfe2fa;  /* chapitres rejoués en mode « Depuis le début » */
 
   /* Typographie */
   --police-titre: "Fraunces", "Iowan Old Style", Georgia, serif;
   --police-texte: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
 
-  /* Le pli : taille du coin replié des feuilles */
-  --pli: 26px;
+  /* Les feuilles : arrondi des encadrés */
+  --arrondi: 14px;
 }
 
 *,
@@ -75,16 +74,9 @@ body.en-diapo {
   overflow: hidden;
 }
 
-/* Fond : une grande facette plus claire, séparée par un pli en diagonale. */
+/* Fond uni : les feuilles ressortent dessus. */
 .fond-papier {
   background-color: var(--fond);
-  background-image: linear-gradient(
-    112deg,
-    transparent 0 58%,
-    color-mix(in srgb, var(--encre) 10%, transparent) 58% calc(58% + 2px),
-    rgba(255, 255, 255, 0.3) calc(58% + 2px) 100%
-  );
-  background-attachment: fixed;
 }
 
 h1,
@@ -96,25 +88,14 @@ h2 {
   margin: 0;
 }
 
-/* Le pli ----------------------------------------------------------------
-   Une feuille dont le coin supérieur droit est replié : la pointe est
-   découpée, le rabat est dessiné dans un ton plus foncé. */
+/* Les feuilles ----------------------------------------------------------
+   Un encadré clair, aux coins arrondis, avec une ombre pleine très discrète. */
 
-.pli {
-  position: relative;
+.feuille {
+  overflow: hidden;
   background: var(--feuille);
-  clip-path: polygon(0 0, calc(100% - var(--pli)) 0, 100% var(--pli), 100% 100%, 0 100%);
-}
-
-.pli::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--pli);
-  height: var(--pli);
-  background: linear-gradient(to bottom left, transparent 50%, var(--fond-fonce) 50%);
-  pointer-events: none;
+  border-radius: var(--arrondi);
+  box-shadow: 0 3px 0 var(--fond-fonce);
 }
 
 /* Boutons ---------------------------------------------------------------- */

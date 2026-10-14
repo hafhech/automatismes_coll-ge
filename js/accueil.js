@@ -99,9 +99,7 @@ export class Accueil {
         bouton.setAttribute("role", "radio");
         bouton.innerHTML =
           `<span class="numero">${position + 1}</span>` +
-          `<span class="titre"></span>` +
-          `<span class="points" aria-hidden="true"></span>` +
-          `<span class="nb-questions">${chapitre.questions.length} q.</span>`;
+          `<span class="titre"></span>`;
         bouton.querySelector(".titre").textContent = chapitre.titre;
         bouton.addEventListener("click", () => this.choisir("chapitre", position));
         item.append(bouton);

@@ -44,8 +44,6 @@
 }
 
 .niveau {
-  --pli: 20px;
-  position: relative;
   height: 4.75rem;
   font-family: var(--police-titre);
   font-variation-settings: "SOFT" 100, "WONK" 0;
@@ -55,6 +53,7 @@
   color: var(--encre);
   background: var(--fond-fonce);
   border: 0;
+  border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.12s;
 }
@@ -64,19 +63,9 @@
 }
 
 .niveau[aria-checked="true"] {
-  color: var(--feuille);
-  background: var(--encre);
-  clip-path: polygon(0 0, calc(100% - var(--pli)) 0, 100% var(--pli), 100% 100%, 0 100%);
-}
-
-.niveau[aria-checked="true"]::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--pli);
-  height: var(--pli);
-  background: linear-gradient(to bottom left, transparent 50%, var(--accent) 50%);
+  color: var(--encre);
+  background: var(--accent);
+  box-shadow: 0 3px 0 var(--encre);
 }
 
 /* La carte : mode de série puis liste des chapitres ---------------------- */
@@ -89,7 +78,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 1.5rem;
-  margin-right: var(--pli);
 }
 
 .onglet {
@@ -119,8 +107,7 @@
   color: var(--encre-douce);
 }
 
-/* Chapitres présentés comme une carte de pâtisserie :
-   titre, points de conduite, nombre de questions. */
+/* Liste des chapitres : un numéro et un titre. */
 
 .menu {
   margin: 0;
@@ -157,23 +144,8 @@
 }
 
 .chapitre .titre {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  max-width: 78%;
-}
-
-.chapitre .points {
-  flex: 1 1 1rem;
-  min-width: 1rem;
-  border-bottom: 2px dotted color-mix(in srgb, var(--encre) 40%, transparent);
-  transform: translateY(-0.3rem);
-}
-
-.chapitre .nb-questions {
-  flex: none;
-  font-size: 0.9rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--encre-douce);
 }
 
 /* Chapitres rejoués dans « Depuis le début » */
@@ -186,13 +158,8 @@
   background: var(--accent);
 }
 
-.chapitre[aria-checked="true"] .numero,
-.chapitre[aria-checked="true"] .nb-questions {
+.chapitre[aria-checked="true"] .numero {
   color: var(--encre);
-}
-
-.chapitre[aria-checked="true"] .points {
-  border-bottom-color: var(--encre);
 }
 
 /* Quand il n'y a pas de chapitre à choisir (tout le niveau, calcul mental) */
@@ -214,7 +181,6 @@
 }
 
 .serie-titre {
-  margin-right: var(--pli);
   font-size: 1.8rem;
 }
 
@@ -262,10 +228,8 @@
   background: var(--encre);
 }
 
-/* Le bouton Lancer : un coin plié, lui aussi. */
+/* Le bouton Lancer */
 .lancer {
-  --pli: 18px;
-  position: relative;
   display: block;
   width: 100%;
   margin-top: 1.6rem;
@@ -273,18 +237,7 @@
   font-family: var(--police-titre);
   font-variation-settings: "SOFT" 100, "WONK" 0;
   font-size: 1.5rem;
-  border: 0;
-  clip-path: polygon(0 0, calc(100% - var(--pli)) 0, 100% var(--pli), 100% 100%, 0 100%);
-}
-
-.lancer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: var(--pli);
-  height: var(--pli);
-  background: linear-gradient(to bottom left, transparent 50%, var(--encre) 50%);
+  border-radius: 12px;
 }
 
 /* Écrans étroits ---------------------------------------------------------- */
@@ -317,15 +270,4 @@
     padding: 1rem 1rem 1.25rem;
   }
 
-  .chapitre .titre {
-    max-width: none;
-  }
-
-  .chapitre .points {
-    display: none;
-  }
-
-  .chapitre .nb-questions {
-    margin-left: auto;
-  }
 }

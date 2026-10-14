@@ -31,16 +31,37 @@ js/
   maths.js            affichage des formules
   donnees.js          chargement des questions
 data/
-  6e.json 5e.json 4e.json 3e.json     les questions, un fichier par niveau
+  6e.json 5e.json 4e.json 3e.json     la liste des chapitres, et quelques questions écrites à la main
 scripts/
   verifier.mjs        contrôle des questions avant publication
 vendor/               KaTeX (formules) et polices Fraunces et Atkinson Hyperlegible, hébergés ici
                       pour que le site fonctionne même sans accès à des services extérieurs
 ```
 
-## Ajouter ou modifier des questions
+## Comment les questions sont fabriquées
 
-Tout se passe dans `data/<niveau>.json`. Un chapitre ressemble à ceci :
+Chaque chapitre a plusieurs **modèles de questions** (dans `js/chapitres/<niveau>.js`) dont les nombres sont tirés au hasard à chaque série. Un chapitre peut ainsi produire plus de mille questions différentes : on peut le retravailler autant de fois qu’on veut sans retomber sur les mêmes. Les quelques questions écrites à la main dans `data/<niveau>.json` viennent s’y mêler.
+
+### Ajouter un modèle à un chapitre
+
+Dans `js/chapitres/6e.js`, chaque chapitre est une liste de petites fonctions. Un modèle ressemble à ceci :
+
+```js
+() => {
+  const a = alea(2, 9);
+  const b = alea(11, 99);
+  return { q: `Calcule : $${a} × ${b}$.`, r: `$${a * b}$`, d: 2 };
+},
+```
+
+- `alea(min, max)` tire un entier au hasard, `choix([...])` choisit dans une liste.
+- `q` : l’énoncé, `r` : la correction, `d` : la difficulté (`1` facile, `2` moyen, `3` difficile).
+- Les formules s’écrivent entre `$ ... $`. Raccourcis acceptés : `3/4` (fraction), `sqrt(2)` (racine), `×`, `÷`, `²`, `°`, `π`, `∥`, `⊥`, `≈`, `≠`, `≤`, `≥`, `cos`, `sin`, `tan`, `%`, et la virgule décimale (`12,5`). Le langage LaTeX fonctionne aussi (`\\dfrac{a}{b}`, avec un antislash doublé dans le fichier).
+- Les fonctions utiles (`dec` pour écrire avec une virgule, `fraction`, `pgcd`, `lettres` pour des noms de points...) sont dans `js/outils.js`.
+
+### Ajouter une question fixe
+
+Dans `data/<niveau>.json`, un chapitre ressemble à ceci :
 
 ```json
 {
@@ -52,12 +73,7 @@ Tout se passe dans `data/<niveau>.json`. Un chapitre ressemble à ceci :
 }
 ```
 
-- `q` : l’énoncé, `r` : la correction, `d` : la difficulté (`1` facile, `2` moyen, `3` difficile).
-- Les formules s’écrivent entre `$ ... $`. Raccourcis acceptés : `3/4` (fraction), `sqrt(2)` (racine), `×`, `÷`, `²`, `°`, `π`, `∥`, `⊥`, `%`, et la virgule décimale (`12,5`).
-- Pour une mise en forme plus poussée, le langage LaTeX fonctionne aussi (`\\dfrac{a}{b}`, en doublant l’antislash dans le fichier JSON).
-- L’ordre des chapitres dans le fichier est l’ordre de la progression : c’est lui qui sert au mode « Depuis le début ».
-
-Pour ajouter un chapitre, copier un bloc de chapitre existant dans `chapitres`, changer `id` et `titre`, et écrire au moins 8 questions de difficultés variées.
+L’ordre des chapitres dans le fichier est l’ordre de la progression : c’est lui qui sert au mode « Depuis le début ». Pour **ajouter un chapitre**, il faut un bloc dans le fichier `.json` et le même `id` dans le fichier `js/chapitres/<niveau>.js`, avec au moins 6 modèles.
 
 ## Vérifier avant de publier
 
@@ -67,7 +83,7 @@ Avec [Node.js](https://nodejs.org) installé :
 npm run verifier
 ```
 
-Le script signale tout chapitre qui a trop peu de questions, toute formule qui ne s’afficherait pas, les énoncés en double, et simule plus d’un millier de séries pour s’assurer qu’aucune n’est incomplète.
+Le script contrôle que chaque chapitre peut produire au moins une centaine de questions différentes, signale toute formule qui ne s’afficherait pas (ou toute virgule écrite comme un point), et simule plus d’un millier de séries pour s’assurer qu’aucune n’est incomplète ou ne contient deux fois la même question.
 
 ## Tester sur son ordinateur
 
@@ -100,4 +116,4 @@ Quand le temps est écoulé, la correction s’affiche d’elle-même.
 
 ## Changer les couleurs
 
-Toute la palette est en tête de `css/base.css` (variables `--fond`, `--encre`, `--accent`...). Modifier ces quelques valeurs change l’apparence de tout le site.
+Toute la palette est en tête de `css/base.css` (variables `--fond`, `--encre`, `--accent`...). La palette actuelle est un camaïeu de bleus. Modifier ces quelques valeurs change l’apparence de tout le site.
